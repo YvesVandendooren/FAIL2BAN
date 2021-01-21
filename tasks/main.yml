@@ -1,0 +1,21 @@
+---
+- name: Install epel repo
+  yum:
+    name:
+    - https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+- name: Install fail2ban
+  yum:
+    name: 
+    - fail2ban
+
+- name: copy fail2ban config
+  copy:
+    src: /etc/fail2ban/jail.conf
+    dest: "/etc/fail2ban/jail.local"
+
+- name: Install fail2ban configuration
+  template:
+    src: fail2ban_config.cf.j2
+    dest: "/etc/fail2ban/jail.local" 
+      
