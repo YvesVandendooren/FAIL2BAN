@@ -1,19 +1,13 @@
 ---
 galaxy_info:
-  author: Bert Van Vreckem
+  author: Yves Vandendooren
   description: >-
-    Ansible role for basic setup of a server with a RedHat-based Linux
-    distribution (CentOS, Fedora, RHEL, ...) with the systemd init system.
-  license: BSD
+    Ansible role for basic setup of fail2ban on CentOS 8
   min_ansible_version: 2.9
   platforms:
     - name: EL
       versions:
-        - 7
         - 8
-    - name: Fedora
-      versions:
-        - 32
   galaxy_tags:
-    - system
+    - fail2ban
 dependencies: []
